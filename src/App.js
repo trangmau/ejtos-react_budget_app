@@ -25,7 +25,7 @@ const App = () => {
                         /* Add Budget component here */
                         // Budget component
                         <div className='col-3'>
-                            <Budget/>
+                            <Budget />
                         </div>
                     }
 
@@ -33,7 +33,7 @@ const App = () => {
                         /* Add Remaining component here*/
                         //Remaining component
                         <div className='col-3'>
-                            <Remaining/>
+                            <Remaining />
                         </div>
 
                     }
@@ -47,9 +47,9 @@ const App = () => {
                     }
 
                     {
-                        /* Add AllocationForm component here under */
+                        /* Add Currency component here under */
                         <div className='col-3'>
-                            <Currency/>
+                            <Currency />
                         </div>
                     }
 
@@ -58,7 +58,15 @@ const App = () => {
                     {
                         /* Add ExpenseList component here */
                         <div className='col-12'>
-                            <ExpenseList/>
+                            <ExpenseList />
+                        </div>
+                    }
+                </div>
+                <div className='row mt-3'>
+                    {
+                        /* Add ExpenseItem component here */
+                        <div className='col-12'>
+                            <ExpenseItem />
                         </div>
                     }
                 </div>
@@ -67,7 +75,7 @@ const App = () => {
                     {
                         /* Add AllocationForm component here under */
                         <div className='col-12'>
-                            <AllocationForm/>
+                            <AllocationForm />
                         </div>
                     }
 

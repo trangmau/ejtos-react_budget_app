@@ -1,15 +1,17 @@
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
+import useCurrency from '../hook/useCurrency';
 
 const AllocationForm = () => {
     const { dispatch, remaining } = useContext(AppContext);
+    const currency = useCurrency();
     const [name, setName] = useState('');
     const [cost, setCost] = useState('');
     const [action, setAction] = useState('Add');
 
     const submitEvent = () => {
         if (cost > remaining && action === "Add") {
-            alert("The value cannot exceed remaining funds £" + remaining);
+            alert(`The value cannot exceed remaining funds ${currency}${remaining}`);
             setCost('');
             return;
         }
@@ -60,7 +62,9 @@ const AllocationForm = () => {
                         <option value="Add">Add</option>
                         <option value="Reduce">Reduce</option>
                     </select>
-
+                    <div className="input-group-prepend" style={{ marginLeft: '2rem' }}>
+                        <span className="input-group-text">{currency}</span>
+                    </div>
                     <input
                         required
                         type='number'

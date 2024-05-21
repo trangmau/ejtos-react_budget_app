@@ -36,7 +36,7 @@ export const AppReducer = (state, action) => {
                     ? { ...expense, cost: expense.cost - action.payload.cost }
                     : expense
             );
-
+                
             return {
                 ...state,
                 expenses: reducedExpenses,
