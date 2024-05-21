@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
+// eslint-disable-next-line
 import { Alert } from 'bootstrap';
 const Currency = () => {
   const {dispatch } = useContext(AppContext);

@@ -54,6 +54,7 @@ const App = () => {
                     }
 
                 </div>
+                <h2 className='mt-3'>Allocation</h2>
                 <div className='row mt-3'>
                     {
                         /* Add ExpenseList component here */
